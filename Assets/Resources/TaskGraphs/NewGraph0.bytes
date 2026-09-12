@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "graphId": "218902224183296",
+  "graphType": "Game.NodeGraphs.TaskGraphAsset",
+  "nodes": [
+    {
+      "nodeId": 218902224191488,
+      "nodeType": "NodeGraphView.StartRuntimeNode",
+      "title": "Start",
+      "userDataJson": null,
+      "nextNodeMap": {
+        "Out": 219130809483264
+      },
+      "inputNodeIds": [],
+      "outputNodeIds": [
+        219130809483264
+      ]
+    },
+    {
+      "nodeId": 219130809483264,
+      "nodeType": "Game.NodeGraphs.TaskRuntimeNode",
+      "title": "Task",
+      "userDataJson": "{\r\n  \"name\": \"Task1\",\r\n  \"description\": \"Desc123\"\r\n}",
+      "nextNodeMap": {
+        "failed": 219130905427968,
+        "complete": 219130995351552
+      },
+      "inputNodeIds": [
+        218902224191488
+      ],
+      "outputNodeIds": [
+        219130905427968,
+        219130995351552
+      ]
+    },
+    {
+      "nodeId": 219130995351552,
+      "nodeType": "Game.NodeGraphs.TaskRuntimeNode",
+      "title": "Task",
+      "userDataJson": "{\r\n  \"name\": \"Task1 complete\",\r\n  \"description\": \"task1 complete\"\r\n}",
+      "nextNodeMap": {
+        "complete": 219143148331008
+      },
+      "inputNodeIds": [
+        219130809483264
+      ],
+      "outputNodeIds": [
+        219143148331008
+      ]
+    },
+    {
+      "nodeId": 219130905427968,
+      "nodeType": "Game.NodeGraphs.TaskRuntimeNode",
+      "title": "Task",
+      "userDataJson": "{\r\n  \"name\": \"Task1 Fail\",\r\n  \"description\": \"tshis task1 fail~~~\"\r\n}",
+      "nextNodeMap": {},
+      "inputNodeIds": [
+        219130809483264
+      ],
+      "outputNodeIds": []
+    },
+    {
+      "nodeId": 219143148331008,
+      "nodeType": "Game.NodeGraphs.TaskRuntimeNode",
+      "title": "Task",
+      "userDataJson": "{\r\n  \"name\": \"Task2\",\r\n  \"description\": \"form task1 complete\"\r\n}",
+      "nextNodeMap": {},
+      "inputNodeIds": [
+        219130995351552
+      ],
+      "outputNodeIds": []
+    }
+  ]
+}
